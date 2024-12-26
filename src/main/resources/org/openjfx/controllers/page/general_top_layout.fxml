@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<fx:root type="javafx.scene.layout.StackPane" style="-fx-background-color: #DDDDDD;-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);"
+         xmlns="http://javafx.com/javafx/11.0.1"
+         xmlns:fx="http://javafx.com/fxml/1"
+         prefWidth="Infinity"
+>
+    <Label fx:id="title" alignment="CENTER" prefWidth="Infinity" style="-fx-font-weight: bold"
+           textFill="black">
+        <font>
+            <Font size="24.0"/>
+        </font>
+        <padding>
+            <Insets bottom="16" top="16"/>
+        </padding>
+    </Label>
+
+
+    <HBox alignment="CENTER_RIGHT">
+        <padding>
+            <Insets right="48"/>
+        </padding>
+        <ImageView fitWidth="32" fitHeight="32" fx:id="userImage">
+            <image>
+                <Image url="@../../images/user.png"/>
+            </image>
+        </ImageView>
+        <MenuButton fx:id="menuButton" alignment="CENTER_RIGHT" style="-fx-background-color: transparent" textFill="black">
+            <items>
+                <MenuItem fx:id="logOut" text="Log out"/>
+            </items>
+        </MenuButton>
+    </HBox>
+
+</fx:root>

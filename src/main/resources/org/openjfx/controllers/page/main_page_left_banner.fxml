@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<fx:root style="-fx-background-color: #FFFFFF" type="javafx.scene.layout.BorderPane" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <VBox alignment="CENTER">
+            <ImageView fitHeight="75" fitWidth="180">
+                <Image url="@../../images/mtuci.png" />
+            </ImageView>
+            <VBox>
+                <padding>
+                    <Insets left="8" right="8" top="16" />
+                </padding>
+
+                <HBox fx:id="conferenceManagement" onMouseClicked="#onItemClick">
+                    <padding>
+                        <Insets bottom="8" />
+                    </padding>
+                    <Pane fx:id="conferenceManagementIndicator" prefWidth="4" style="-fx-background-color: #0C7CBA" />
+                    <Label fx:id="conferenceManagementText" prefHeight="17.0" prefWidth="150.0" text="Client">
+                        <padding>
+                            <Insets left="4" />
+                        </padding>
+                  <font>
+                     <Font name="System Bold" size="18.0" />
+                  </font>
+                    </Label>
+                </HBox>
+
+            </VBox>
+        </VBox>
+
+    </top>
+
+
+</fx:root>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import org.openjfx.controllers.page.MainPageLeftBannerController?>
+<?import org.openjfx.controllers.page.GeneralTopLayout?>
+<BorderPane prefHeight="734.0" prefWidth="1396.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.openjfx.controllers.page.ConferenceManagementController">
+    <left>
+        <StackPane>
+            <MainPageLeftBannerController index="0"/>
+        </StackPane>
+
+    </left>
+    <top>
+        <GeneralTopLayout titleText="Client"/>
+    </top>
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true">
+            <VBox prefHeight="Infinity" prefWidth="Infinity">
+                <padding>
+                    <Insets bottom="16" left="32" right="32" top="16"/>
+                </padding>
+                <BorderPane prefWidth="Infinity">
+                    <left>
+                        <Label text="On-going conference" fx:id="onGoingConferenceLabel">
+                            <font>
+                                <Font name="System Bold" size="16"/>
+                            </font>
+                        </Label>
+                    </left>
+                    <right>
+                        <Button style="-fx-background-color: #19967d; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);"
+                                text="Activate product" textFill="white" onMouseClicked="#gotoCreateConferencePage">
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                        </Button>
+                    </right>
+                </BorderPane>
+                <FlowPane prefWidth="Infinity" fx:id="onGoingConferenceFlowPane"/>
+                <Label text="finished conference" fx:id="finishedConferenceLabel">
+                    <font>
+                        <Font name="System Bold" size="16"/>
+                    </font>
+                </Label>
+                <FlowPane prefWidth="Infinity" fx:id="finishedConferenceFLowPane"/>
+                <Label prefWidth="Infinity" prefHeight="Infinity" textAlignment="CENTER" textFill="gray" text="You do not have an conference yet" visible="false" fx:id="noContentLabel">
+                    <font>
+                        <Font name="System Bold" size="32"/>
+                    </font>
+                </Label>
+            </VBox>
+        </ScrollPane>
+
+    </center>
+
+</BorderPane>

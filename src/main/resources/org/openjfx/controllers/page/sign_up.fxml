@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<?import org.openjfx.helper.AutoTrimTextField?>
+<BorderPane prefWidth="1396.0"
+            prefHeight="734.0"
+            style="-fx-background-color: #f6f6f6;" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.controllers.page.SignUpController">
+    <top>
+        <BorderPane>
+            <padding>
+                <Insets right="16" top="8" left="16"/>
+            </padding>
+            <left>
+                <ImageView fitHeight="73" fitWidth="180">
+                    <image>
+                        <Image url="@../../images/mtuci.png"/>
+                    </image>
+                </ImageView>
+            </left>
+            <center>
+                <Label text="User Registration" style="-fx-font-weight: bold"
+                       wrapText="true" textAlignment="CENTER">
+                    <font>
+                        <Font size="38"/>
+                    </font>
+                </Label>
+            </center>
+
+        </BorderPane>
+    </top>
+    <left>
+        <VBox alignment="CENTER" onMouseClicked="#back">
+            <padding>
+                <Insets left="64"/>
+            </padding>
+            <ImageView fitHeight="48" fitWidth="48">
+                <Image url="@../../images/back_arrow.png"/>
+            </ImageView>
+            <Label text="Back to Log in"/>
+        </VBox>
+
+    </left>
+    <center>
+        <VBox alignment="CENTER" maxWidth="560" minWidth="200">
+            <HBox>
+                <VBox alignment="CENTER_LEFT" prefWidth="280">
+                    <padding>
+                        <Insets left="4" top="8" bottom="8" right="4"/>
+                    </padding>
+                    <Label text="First Name" style="-fx-font-weight: bold"/>
+                    <AutoTrimTextField fx:id="firstName"/>
+                </VBox>
+                <VBox alignment="CENTER_LEFT" prefWidth="280">
+                    <Label text="Last Name" style="-fx-font-weight: bold"/>
+                    <AutoTrimTextField fx:id="lastName"/>
+                </VBox>
+            </HBox>
+            
+            <VBox>
+                <padding>
+                    <Insets left="4" top="8" bottom="8" right="4"/>
+                </padding>
+                <Label text="Email" style="-fx-font-weight: bold"/>
+                <AutoTrimTextField fx:id="email"/>
+            </VBox>
+
+            <VBox>
+                <padding>
+                    <Insets left="4" top="8" bottom="8" right="4"/>
+                </padding>
+                <Label text="Password" style="-fx-font-weight: bold"/>
+                <PasswordField fx:id="password" promptText="The password must have at least 1 digit number 1 upper case and 1 lower case"/>
+            </VBox>
+
+            <VBox>
+                <padding>
+                    <Insets left="4" top="8" bottom="8" right="4"/>
+                </padding>
+                <Label text="Confirmed password" style="-fx-font-weight: bold"/>
+                <PasswordField fx:id="confirmedPassword" promptText="The password must have at least 1 digit number 1 upper case and 1 lower case"/>
+            </VBox>
+
+            <VBox>
+                <padding>
+                    <Insets left="4" top="8" bottom="8" right="4"/>
+                </padding>
+                <Label text="Mobile number" style="-fx-font-weight: bold"/>
+                <AutoTrimTextField fx:id="mobileNumber"/>
+            </VBox>
+
+            <VBox>
+                <padding>
+                    <Insets left="4" top="8" bottom="8" right="4"/>
+                </padding>
+                <Label text="Employer's details" style="-fx-font-weight: bold"/>
+                <AutoTrimTextField fx:id="employerDetails" onAction="#sign_up"/>
+            </VBox>
+
+            <Button text="Sign up" onAction="#sign_up" style="-fx-background-color: #3aa6dd" textFill="white" prefWidth="Infinity" >
+                <font>
+                    <Font size="18"/>
+                </font>
+            </Button>
+        </VBox>
+    </center>
+</BorderPane>

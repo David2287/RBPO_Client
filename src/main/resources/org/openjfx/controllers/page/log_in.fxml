@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import org.openjfx.helper.AutoTrimTextField?>
+<BorderPane prefHeight="734.0" prefWidth="1396.0" style="-fx-background-color: #f6f6f6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.controllers.page.LoginPageController">
+    <top>
+        <BorderPane>
+            <padding>
+                <Insets left="16" right="16" top="8" />
+            </padding>
+            <left>
+                <ImageView fitHeight="75" fitWidth="180">
+                    <image>
+                        <Image url="@../../images/mtuci.png" />
+                    </image>
+                </ImageView>
+            </left>
+            <center>
+                <Label style="-fx-font-weight: bold" text="Client" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="70" />
+                    </font>
+                </Label>
+            </center>
+
+        </BorderPane>
+    </top>
+    <center>
+        <StackPane>
+            <VBox alignment="CENTER_LEFT" maxWidth="560" minWidth="200">
+                <Label style="-fx-font-weight: bold" text="Email">
+                    <font>
+                        <Font size="18" />
+                    </font>
+                    <padding>
+                        <Insets bottom="8" top="8" />
+                    </padding>
+                </Label>
+                <AutoTrimTextField fx:id="userName" onAction="#login" />
+                <Label style="-fx-font-weight: bold" text="password">
+                    <font>
+                        <Font size="18" />
+                    </font>
+                    <padding>
+                        <Insets bottom="8" top="8" />
+                    </padding>
+                </Label>
+                <PasswordField fx:id="password" onAction="#login" />
+                <StackPane>
+                    <padding>
+                        <Insets bottom="16" top="16" />
+                    </padding>
+                    <Button onMouseClicked="#login" prefWidth="Infinity" style="-fx-background-color: #3aa6dd" text="Log in" textFill="white">
+                        <font>
+                            <Font size="18" />
+                        </font>
+                    </Button>
+                </StackPane>
+                <HBox alignment="CENTER">
+                    <Label style="-fx-font-weight: bold" text="Don’t have an account yet? " />
+                    <Label onMouseClicked="#signup" style="-fx-font-weight: bold" text="Sign up" textFill="dodgerblue" />
+                </HBox>
+
+            </VBox>
+        </StackPane>
+
+    </center>
+</BorderPane>
